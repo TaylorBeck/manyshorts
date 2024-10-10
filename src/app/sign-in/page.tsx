@@ -20,20 +20,13 @@ export default function SignInPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    setLoading(true);
-    const result = await signIn('credentials', {
-      redirect: false,
-      email,
-      password
-    });
-
-    const result = await signIn('credentials', {
-      redirect: false,
-      email,
-      password
-    });
     setLoading(false);
+
+    const result = await signIn('credentials', {
+      redirect: false,
+      email,
+      password
+    });
 
     if (result?.error) {
       toast({
