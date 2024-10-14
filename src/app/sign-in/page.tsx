@@ -39,7 +39,7 @@ export default function SignInPage() {
         title: 'Sign In Successful',
         description: 'Welcome back!'
       });
-      router.push('/dashboard');
+      router.push('/home');
     }
 
     setLoading(false);
